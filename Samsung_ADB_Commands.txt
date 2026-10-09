@@ -1,0 +1,13 @@
+# Samsung safe baseline optimization
+# This file is read by the Android shell through ADB.
+# Do NOT add "adb shell" before these commands.
+# These changes only adjust Android UI animation speeds.
+
+settings put global window_animation_scale 0.5
+settings put global transition_animation_scale 0.5
+settings put global animator_duration_scale 0.5
+
+# Verify the values (expected: 0.5 for each command)
+settings get global window_animation_scale
+settings get global transition_animation_scale
+settings get global animator_duration_scale
